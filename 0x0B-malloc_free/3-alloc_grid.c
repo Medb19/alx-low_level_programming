@@ -24,7 +24,7 @@ int **alloc_grid(int width, int height)
 			tab[i] = malloc(sizeof(**tab) * width);
 			if (tab[i] == 0)
 			{
-				/*Everythings is freed if malloc fails*/
+				/*Free everything if malloc fails*/
 				while (i--)
 					free(tab[i]);
 				return (NULL);
